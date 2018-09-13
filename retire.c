@@ -8,7 +8,7 @@
 #include<stdio.h>
 #include<math.h>
 
-int main(int argc, **char argv) {
+int main(int argc, char **argv) {
 
 double InitialBalance, MonthlyContributionAmount, RateOfReturn, RateOfInflation, YearsUntilRetirement;
 InitialBalance = atof(argv[1]);
