@@ -29,10 +29,10 @@ for(i=1,i<YearsUntilRetirement*12,i++) {
   InitialBalance = CurrentBalance;
   double InflationAdjusted = ((1+RateOfReturn)/(1+RateOfInflation)-1)/12;
   double Interest = InflationAdjusted * CurrentBalance;
-  FinalBalance = Interest + MothlyContributionRate + CurrentBalance
-  printf("%f\t %f\t %f\n", i, Interest, FinalBalance)
+  FinalBalance = Interest + MothlyContributionRate + CurrentBalance;
+  printf("%f\t %f\t %f\n", i, Interest, FinalBalance);
 }  
-  double TotalInterest += Interest
+  double TotalInterest += Interest;
   printf("Total Interest Earned: $%f\n Total Nest Egg: $%f\n", TotalInterest, FinalBalance);
   return 0;
 }
