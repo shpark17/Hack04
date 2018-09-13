@@ -22,7 +22,7 @@ if(argc != 4) {
   exit(1);
 }
 
-printf(Month Interest Balance\n");
+printf("Month Interest Balance\n");
 for(i=1,i<YearsUntilRetirement*12,i++) {
 
   double CurrentBalance, FinalBalance;
