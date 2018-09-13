@@ -22,6 +22,10 @@ if(argc != 4) {
   exit(1);
 }
 
+if(MonthlyContributionAmount > 18500) {
+ printf("Illegal: monthly contributions exceed $18,500 annual limit");
+}
+ 
 printf("Month Interest Balance\n");
 for(i=1,i<YearsUntilRetirement*12,i++) {
 
