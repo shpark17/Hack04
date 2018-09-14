@@ -33,7 +33,7 @@ int i;
 double Interest, TotalInterest, FinalBalance;
 FinalBalance = InitialBalance;
 TotalInterest = 0;
-for(i=1;i<YearsUntilRetirement*12;i++) {
+for(i=1;i<=YearsUntilRetirement*12;i++) {
   Interest = InflationAdjusted * FinalBalance;
   FinalBalance = Interest + MonthlyContributionAmount + FinalBalance;
   TotalInterest += Interest;
