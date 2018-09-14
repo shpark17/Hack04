@@ -24,6 +24,7 @@ int main(int argc, char **argv) {
  
 if(MonthlyContributionAmount*12 > 18500) {
   printf("Illegal: monthly contributions exceed $18,500 annual limit");
+exit(1); 
   }
  
 double InflationAdjusted = ((1+RateOfReturn)/(1+RateOfInflation)-1)/12; 
@@ -37,7 +38,8 @@ for(i=1;i<=YearsUntilRetirement*12;i++) {
   Interest = InflationAdjusted * FinalBalance;
   FinalBalance = Interest + MonthlyContributionAmount + FinalBalance;
   TotalInterest += Interest;
-  printf("%d\t %f\t %f\n", i, Interest, FinalBalance);
+  round(FinalBalance*100)/100;
+  printf("%d\t $%f\t $%f\n", i, Interest, FinalBalance);
 }  
    
   printf("Total Interest Earned: $%f\n Total Nest Egg: $%f\n", TotalInterest, FinalBalance);
