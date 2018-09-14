@@ -29,7 +29,7 @@ exit(1);
  
 double InflationAdjusted = ((1+RateOfReturn)/(1+RateOfInflation)-1)/12; 
  
-printf("Month Interest Balance\n");
+printf("Month\t Interest\t Balance\n");
 int i;
 double Interest, TotalInterest, FinalBalance;
 FinalBalance = InitialBalance;
