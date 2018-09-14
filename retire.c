@@ -40,10 +40,10 @@ for(i=1;i<=YearsUntilRetirement*12;i++) {
   FinalBalance = Interest + MonthlyContributionAmount + FinalBalance;
   TotalInterest += Interest;
   
-  printf("%d\t $%f\t $%f\n", i, Interest, FinalBalance);
+  printf("%d\t $%.2f\t $%.2f\n", i, Interest, FinalBalance);
 }  
    
-  printf("Total Interest Earned: $%f\n Total Nest Egg: $%f\n", TotalInterest, FinalBalance);
+  printf("Total Interest Earned: $%.2f\n Total Nest Egg: $%.2f\n", TotalInterest, FinalBalance);
  
   return 0;
 }
