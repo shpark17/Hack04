@@ -30,7 +30,7 @@ printf("Month Interest Balance\n");
 int i;
 double Interest, TotalInterest, FinalBalance;
 for(i=1,i<YearsUntilRetirement*12,i++) {
-  double CurrentBalance, FinalBalance;
+  double CurrentBalance;
   InitialBalance = CurrentBalance;
   double InflationAdjusted = ((1+RateOfReturn)/(1+RateOfInflation)-1)/12;
   Interest = InflationAdjusted * CurrentBalance;
