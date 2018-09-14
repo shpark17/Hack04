@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
   RateOfInflation = atof(argv[4]);
   YearsUntilRetirement = atof(argv[5]);
  
-if(MonthlyContributionAmount > 18500) {
+if(MonthlyContributionAmount*12 > 18500) {
   printf("Illegal: monthly contributions exceed $18,500 annual limit");
   }
  
