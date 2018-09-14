@@ -27,16 +27,17 @@ if(MonthlyContributionAmount > 18500) {
 }
  
 printf("Month Interest Balance\n");
+int i;
 for(i=1,i<YearsUntilRetirement*12,i++) {
-
   double CurrentBalance, FinalBalance;
   InitialBalance = CurrentBalance;
   double InflationAdjusted = ((1+RateOfReturn)/(1+RateOfInflation)-1)/12;
   double Interest = InflationAdjusted * CurrentBalance;
-  FinalBalance = Interest + MothlyContributionRate + CurrentBalance;
+  FinalBalance = Interest + MothlyContributionAmount + CurrentBalance;
   printf("%f\t %f\t %f\n", i, Interest, FinalBalance);
 }  
-  double TotalInterest += Interest;
+  double TotalInterest
+  TotalInterest += Interest;
   printf("Total Interest Earned: $%f\n Total Nest Egg: $%f\n", TotalInterest, FinalBalance);
   return 0;
 }
