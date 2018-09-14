@@ -9,19 +9,19 @@
 #include<math.h>
 
 int main(int argc, char **argv) {
-
-  double InitialBalance, MonthlyContributionAmount, RateOfReturn, RateOfInflation, YearsUntilRetirement, TotalInterest, FinalBalance;
+ 
+   if(argc != 6) {
+    printf("Please type ./a.out and 5 values with space between each.\n", argv[0]);
+  exit(1);
+  }
+ 
+ double InitialBalance, MonthlyContributionAmount, RateOfReturn, RateOfInflation, YearsUntilRetirement, TotalInterest, FinalBalance;
   InitialBalance = atof(argv[1]);
   MonthlyContributionAmount = atof(argv[2]);
   RateOfReturn = atof(argv[3]);
   RateOfInflation = atof(argv[4]);
   YearsUntilRetirement = atof(argv[5]);
-
-  if(argc != 4) {
-  printf("Please type ./a.out and 5 values with space between each.\n", argv[0]);
-  exit(1);
-  }
-
+ 
 if(MonthlyContributionAmount > 18500) {
   printf("Illegal: monthly contributions exceed $18,500 annual limit");
   }
