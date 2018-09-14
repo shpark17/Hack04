@@ -36,9 +36,10 @@ FinalBalance = InitialBalance;
 TotalInterest = 0;
 for(i=1;i<=YearsUntilRetirement*12;i++) {
   Interest = InflationAdjusted * FinalBalance;
+  Interest = round(Interest*100)/100;
   FinalBalance = Interest + MonthlyContributionAmount + FinalBalance;
   TotalInterest += Interest;
-  round(FinalBalance*100)/100;
+  
   printf("%d\t $%f\t $%f\n", i, Interest, FinalBalance);
 }  
    
