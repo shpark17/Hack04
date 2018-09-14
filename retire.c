@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
   exit(1);
   }
  
- double InitialBalance, MonthlyContributionAmount, RateOfReturn, RateOfInflation, YearsUntilRetirement, TotalInterest, FinalBalance;
+ double InitialBalance, MonthlyContributionAmount, RateOfReturn, RateOfInflation, YearsUntilRetirement;
   InitialBalance = atof(argv[1]);
   MonthlyContributionAmount = atof(argv[2]);
   RateOfReturn = atof(argv[3]);
@@ -28,7 +28,7 @@ if(MonthlyContributionAmount > 18500) {
  
 printf("Month Interest Balance\n");
 int i;
-double Interest;
+double Interest, TotalInterest, FinalBalance;
 for(i=1,i<YearsUntilRetirement*12,i++) {
   double CurrentBalance, FinalBalance;
   InitialBalance = CurrentBalance;
