@@ -10,21 +10,21 @@
 
 int main(int argc, char **argv) {
 
-double InitialBalance, MonthlyContributionAmount, RateOfReturn, RateOfInflation, YearsUntilRetirement;
-InitialBalance = atof(argv[1]);
-MonthlyContributionAmount = atof(argv[2]);
-RateOfReturn = atof(argv[3]);
-RateOfInflation = atof(argv[4]);
-YearsUntilRetirement = atof(argv[5]);
+  double InitialBalance, MonthlyContributionAmount, RateOfReturn, RateOfInflation, YearsUntilRetirement, TotalInterest, FinalBalance;
+  InitialBalance = atof(argv[1]);
+  MonthlyContributionAmount = atof(argv[2]);
+  RateOfReturn = atof(argv[3]);
+  RateOfInflation = atof(argv[4]);
+  YearsUntilRetirement = atof(argv[5]);
 
-if(argc != 4) {
+  if(argc != 4) {
   printf("Please type ./a.out and 5 values with space between each.\n", argv[0]);
   exit(1);
-}
+  }
 
 if(MonthlyContributionAmount > 18500) {
- printf("Illegal: monthly contributions exceed $18,500 annual limit");
-}
+  printf("Illegal: monthly contributions exceed $18,500 annual limit");
+  }
  
 printf("Month Interest Balance\n");
 int i;
@@ -36,8 +36,8 @@ for(i=1,i<YearsUntilRetirement*12,i++) {
   FinalBalance = Interest + MothlyContributionAmount + CurrentBalance;
   printf("%f\t %f\t %f\n", i, Interest, FinalBalance);
 }  
-  double TotalInterest
   TotalInterest += Interest;
   printf("Total Interest Earned: $%f\n Total Nest Egg: $%f\n", TotalInterest, FinalBalance);
+ 
   return 0;
 }
