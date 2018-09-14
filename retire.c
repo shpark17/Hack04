@@ -30,16 +30,16 @@ double InflationAdjusted = ((1+RateOfReturn)/(1+RateOfInflation)-1)/12;
  
 printf("Month Interest Balance\n");
 int i;
-double Interest, TotalInterest, CurrentBalance, FinalBalance;
-CurrentBalance = InitialBalance;
-TotalInterest = 0 
+double Interest, TotalInterest, FinalBalance;
+FinalBalance = InitialBalance;
+TotalInterest = 0;
 for(i=1;i<YearsUntilRetirement*12;i++) {
-  Interest = InflationAdjusted * CurrentBalance;
-  FinalBalance = Interest + MonthlyContributionAmount + CurrentBalance;
+  Interest = InflationAdjusted * FinalBalance;
+  FinalBalance = Interest + MonthlyContributionAmount + FinalBalance;
+  TotalInterest += Interest;
   printf("%d\t %f\t %f\n", i, Interest, FinalBalance);
 }  
- 
-  TotalInterest += Interest;
+   
   printf("Total Interest Earned: $%f\n Total Nest Egg: $%f\n", TotalInterest, FinalBalance);
  
   return 0;
