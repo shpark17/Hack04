@@ -11,7 +11,7 @@
 int main(int argc, char **argv) {
  
    if(argc != 6) {
-    printf("Please type ./a.out and 5 values with space between each.\n", argv[0]);
+    printf("Please type %s and 5 values with space between each.\n", argv[0]);
   exit(1);
   }
  
@@ -26,17 +26,19 @@ if(MonthlyContributionAmount*12 > 18500) {
   printf("Illegal: monthly contributions exceed $18,500 annual limit");
   }
  
+double InflationAdjusted = ((1+RateOfReturn)/(1+RateOfInflation)-1)/12; 
+ 
 printf("Month Interest Balance\n");
 int i;
-double Interest, TotalInterest, FinalBalance;
+double Interest, TotalInterest, CurrentBalance, FinalBalance;
+CurrentBalance = InitialBalance;
+TotalInterest = 0 
 for(i=1;i<YearsUntilRetirement*12;i++) {
-  double CurrentBalance;
-  InitialBalance = CurrentBalance;
-  double InflationAdjusted = ((1+RateOfReturn)/(1+RateOfInflation)-1)/12;
   Interest = InflationAdjusted * CurrentBalance;
   FinalBalance = Interest + MonthlyContributionAmount + CurrentBalance;
   printf("%d\t %f\t %f\n", i, Interest, FinalBalance);
 }  
+ 
   TotalInterest += Interest;
   printf("Total Interest Earned: $%f\n Total Nest Egg: $%f\n", TotalInterest, FinalBalance);
  
